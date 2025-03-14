@@ -1,13 +1,11 @@
 #include <stdio.h>
-
-// ANSI Color Codes for Attractive Output
 #define GREEN "\033[1;32m"
 #define BLUE "\033[1;34m"
 #define YELLOW "\033[1;33m"
 #define RED "\033[1;31m"
 #define RESET "\033[0m"
 
-// Function to convert marks to grade points
+
 float getGradePoint(float marks) {
     if (marks >= 90) return 10;
     else if (marks >= 80) return 9;
@@ -43,9 +41,7 @@ int main() {
     }
 
     float cgpa = weightedSum / totalCredits;
-    float percentage = cgpa * 9.5;  // Approximate conversion formula
-
-    // Display results in an attractive format
+    float percentage = cgpa * 9.5;  
     printf(BLUE "\n--------------------------------------\n" RESET);
     printf(GREEN "Total Credits: %.2f\n" RESET, totalCredits);
     printf(GREEN "Your CGPA: %.2f\n" RESET, cgpa);
